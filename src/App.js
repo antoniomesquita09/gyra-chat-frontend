@@ -7,6 +7,8 @@ import client from 'services/apollo'
 
 import Routes from './App.routes'
 
+import 'styles/index.scss'
+
 const App = () => (
   <ApolloProvider client={client}>
     <ToastContainer />
