@@ -1,0 +1,31 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+
+  // background-color: #b3b3b3;
+}
+
+.message {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  align-self: flex-start;
+
+  border-radius: 8px;
+
+  padding: 8px;
+  margin-bottom: 10px;
+
+  background-color: #b3b3b3;
+}
+
+.date {
+  font-size: 10px;
+  margin-left: 8px;
+}

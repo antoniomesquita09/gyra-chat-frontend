@@ -1,24 +1,27 @@
 import React from 'react'
-import { useMutation, useQuery } from '@apollo/client'
+// import { useMutation } from '@apollo/client'
 
-import { ROOMS } from './graphql/queries'
-import { USER } from './graphql/mutations'
+// import { USER } from './graphql/mutations'
 
 import Wrapper from 'components/Wrapper'
 import Sidebar from 'components/Sidebar'
 
+import { useRooms } from 'hooks'
+
 import styles from './index.module.scss'
 
 const Home = () => {
-  const { data: { rooms = [] } = {} } = useQuery(ROOMS)
-  const [createUser] = useMutation(USER)
+  const { rooms } = useRooms()
+
+  // const [createUser] = useMutation(USER)
 
   const handleCreateUser = async () => {
-    await createUser({
-      variables: {
-        name: 'Tonin',
-      },
-    })
+    // await createUser({
+    //   variables: {
+    //     name: 'Tonin',
+    //   },
+    // })
+    console.log('create user')
   }
 
   return (
